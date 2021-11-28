@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+      </ion-buttons>
+      <p id="p">Programar viaje</p>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-content>
+        <form>
+          <ion-item>
+            <ion-label position="floating">Apodo del conductor</ion-label>
+            <ion-input [(ngModel)]="detalles.nombreViaje" name="nombreViaje" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input [(ngModel)]="detalles.precioViaje" name="precioViaje" type="number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Descripcion del Viaje</ion-label>
+            <br><ion-input [(ngModel)]="detalles.descripcionViaje" name="descripcionViaje"></ion-input><br>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Cantidad de pasajeros</ion-label>
+            <ion-input [(ngModel)]="detalles.cantidadPasajeros" name="cantidadPasajeros" type="number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Hora de Salida</ion-label>
+            <br><ion-input [(ngModel)]="detalles.horaSalida" name="horaSalida" type="time" step="2"></ion-input>
+          </ion-item>
+
+          <ion-button color="secondary" (click)="modificarViaje()">
+              Modificar Viaje
+          </ion-button>
+        </form>
+      </ion-card-content>      
+  </ion-card>
+</ion-content>
+
+<app-footer></app-footer>

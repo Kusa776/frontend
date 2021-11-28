@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-header>
+        <ion-title>Registro</ion-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+
+          <ion-item>
+            <ion-label position="floating">Nombre de Usuario</ion-label>
+            <ion-input type="text" #nombreUsuario></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" #nombre></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input type="text" #apellido></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" #contrasena></ion-input>
+          </ion-item>
+          <ion-list>
+            <ion-radio-group #rol>
+              <ion-list-header>
+                <ion-label>¿Que eres?</ion-label>
+              </ion-list-header>
+          
+              <ion-item>
+                <ion-label>Pasajero</ion-label>
+                <ion-radio slot="start" value="true"></ion-radio>
+              </ion-item>
+          
+              <ion-item>
+                <ion-label>Conductor</ion-label>
+                <ion-radio slot="start" value="false"></ion-radio>
+              </ion-item>
+          
+            </ion-radio-group>
+          </ion-list>
+          <p [routerLink]="['/inicio-s']"> ¿Ya tienes una cuenta? ¡Inicia Sesion!</p>
+          <ion-button color="tertiary" (click)="agregarUsuario(nombreUsuario, nombre, apellido, contrasena, rol)" >Registrar </ion-button>
+          <br>
+        </form>
+        
+        
+      </ion-card-content>      
+  </ion-card>
+</ion-content>
+
+<app-footer></app-footer>

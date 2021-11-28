@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card id="carta">
+        <img [src]="this.detalles.urlImagen"/>
+        <ion-card-header>
+          <ion-card-title>{{this.detalles.nombreViaje}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{this.detalles.descripcionViaje}}
+        </ion-card-content>
+      </ion-card>
+      <p><ion-button color="primary" class ="ion-margin-vertical" (click)="notificacion()">Viajar</ion-button></p> Precio:{{this.detalles.precioViaje}}$CLP
+  </div>
+</ion-content>
+
+
+
+<app-footer></app-footer>

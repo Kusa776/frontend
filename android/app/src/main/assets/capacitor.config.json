@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "TeLlevoAPP",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

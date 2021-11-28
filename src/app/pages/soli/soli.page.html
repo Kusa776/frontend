@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="container">
+<ion-list>
+    <ion-item *ngFor="let ai of detalles">
+        <ion-avatar slot="start">
+            <img [src]="ai.urlImagen">
+        </ion-avatar>
+        <ion-label>
+            <h1>{{ai.nombreViaje}}</h1>
+            <h1>{{ai.precioViaje}}$CLP</h1>
+            <ion-button color="primary" [routerLink]="['/soli',ai.id]">Detalles</ion-button>
+            <ion-button color="danger" (click)="eliminarViaje(ai.id)">Eliminar</ion-button>
+            <ion-button color="secondary" [routerLink]="['/actualizar',ai.id]">Modificar</ion-button>
+        </ion-label>
+    </ion-item>
+</ion-list>
+
+</ion-content>
+
+<app-footer></app-footer>
